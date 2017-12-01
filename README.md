@@ -35,10 +35,3 @@ sources:
 
 
 
-
-//source & inspired
-- https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/forms
-- https://github.com/mdn/express-locallibrary-tutorial
-- https://nodewebapps.com/2017/06/18/how-do-nodejs-sessions-work/
-
-
