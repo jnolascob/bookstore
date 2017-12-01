@@ -41,52 +41,18 @@ html(lang='en')
           p.float-right.d-md-none
             button.btn.btn-primary.btn-sm(type='button', data-toggle='offcanvas') Toggle nav
           .jumbotron
-            h1 Libros disponibles
+            h1= title
             p
               | This is an example to show the potential of an offcanvas layout pattern in Bootstrap. Try some responsive-range viewport sizes to see it in action.
           .row
-            .col-6.col-lg-4
-              h2 Heading
-              p
-                | Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
-              p
-                a.btn.btn-secondary(href='#', role='button') View details »
-            // /span
-            .col-6.col-lg-4
-              h2 Heading
-              p
-                | Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
-              p
-                a.btn.btn-secondary(href='#', role='button') View details »
-            // /span
-            .col-6.col-lg-4
-              h2 Heading
-              p
-                | Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
-              p
-                a.btn.btn-secondary(href='#', role='button') View details »
-            // /span
-            .col-6.col-lg-4
-              h2 Heading
-              p
-                | Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
-              p
-                a.btn.btn-secondary(href='#', role='button') View details »
-            // /span
-            .col-6.col-lg-4
-              h2 Heading
-              p
-                | Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
-              p
-                a.btn.btn-secondary(href='#', role='button') View details »
-            // /span
-            .col-6.col-lg-4
-              h2 Heading
-              p
-                | Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
-              p
-                a.btn.btn-secondary(href='#', role='button') View details »
-            // /span
+            each book in book_list
+              .col-6.col-lg-4
+                h2= book.title
+                p
+                  | Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+                p
+                  a.btn.btn-secondary(href='#', role='button') View details »
+              // /span
           // /row
         // /span
         #sidebar.col-6.col-md-3.sidebar-offcanvas

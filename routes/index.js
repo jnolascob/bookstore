@@ -17,9 +17,7 @@ router.get('/dashboard', function(req, res, next) {
   res.render('dashboard', {});
 });
 
-router.get('/books', function(req, res, next) {
-  res.render('books', {});
-});
+router.get('/books', book_controller.book_list);
 
 /* POST request */
 router.post('/login', login_controller.login_post);

@@ -19,3 +19,11 @@ exports.book_create = function(req, res) {
         res.status(400).send({ status: 400, message: 'error', data: '' });
     });
 };
+
+
+exports.book_list = function(req, res, next) {
+    Book.find({}, function(err, books) {
+        if (err) { return next(err); }
+        res.render('books', { title: 'Lista de libros TOP', book_list: books });
+      });
+};
