@@ -9,4 +9,10 @@ let BookSchema = Schema({
     genre: String
 });
 
+BookSchema
+.virtual('url')
+.get(function () {
+  return '/book/'+this._id;
+});
+
 module.exports = mongoose.model('Book', BookSchema);
