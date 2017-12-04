@@ -21,9 +21,16 @@ exports.book_create = function(req, res) {
 };
 
 
-exports.book_list = function(req, res, next) {
+exports.book_list = (req, res, next) => {
     Book.find({}, function(err, books) {
         if (err) { return next(err); }
         res.render('books', { title: 'Lista de libros TOP', book_list: books });
       });
+};
+
+exports.book_detail = (req, res, next) => {
+    Book.findById(req.params.id, (err, book) => {
+        if (err) return next(err);
+        res.render('bookDetail', { book: book });
+    });
 };
