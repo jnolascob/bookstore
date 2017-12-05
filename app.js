@@ -1,4 +1,5 @@
 let express = require('express');
+let session = require('express-session');
 let path = require('path');
 let logger = require('morgan');
 let bodyParser = require('body-parser');
@@ -8,6 +9,11 @@ let mongoose = require('mongoose');
 
 let index = require('./routes/index');
 let app = express();
+app.use(session({
+  secret: 'work hard',
+  resave: true,
+  saveUninitialized: false
+}));
 
 // setup mongoDB
 let uri = 'mongodb://localhost:27017/bookstore';

@@ -3,6 +3,7 @@ let router = express.Router();
 
 let login_controller = require('../controllers/loginController');
 let book_controller = require('../controllers/bookController');
+let home_controller = require('../controllers/homeController');
 
 /* GET request */
 router.get('/', (req, res, next) => {
@@ -13,9 +14,11 @@ router.get('/login', (req, res, next) => {
   res.render('login', {});
 });
 
-router.get('/dashboard', (req, res, next) => {
-  res.render('dashboard', {});
-});
+// router.get('/home', (req, res, next) => {
+//   res.render('home', { data: req.session.email });
+// });
+
+router.get('/home', home_controller.home_validate);
 
 router.get('/books', book_controller.book_list);
 
