@@ -22,10 +22,14 @@ exports.book_create = function(req, res) {
 
 
 exports.book_list = (req, res, next) => {
-    Book.find({}, function(err, books) {
-        if (err) { return next(err); }
-        res.render('books', { title: 'Lista de libros TOP', book_list: books });
-      });
+    if (req.session && req.session.email) {
+        Book.find({}, function(err, books) {
+            if (err) { return next(err); }
+            res.render('books', { title: 'Lista de libros TOP', book_list: books });
+          });
+    } else {
+        res.redirect('/login');
+    }
 };
 
 exports.book_detail = (req, res, next) => {

@@ -21,3 +21,12 @@ exports.login_post = (req, res, next) => {
     });
     res.redirect('/home');
 };
+
+exports.logout = (req, res, next) => {
+    if (req.session) {
+        req.session.destroy((err) => {
+            if(err) console.log('algo salio mal al cerrar sesion')
+            return res.redirect('/login');
+        });
+    }
+};

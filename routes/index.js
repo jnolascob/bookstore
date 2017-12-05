@@ -14,9 +14,7 @@ router.get('/login', (req, res, next) => {
   res.render('login', {});
 });
 
-// router.get('/home', (req, res, next) => {
-//   res.render('home', { data: req.session.email });
-// });
+router.get('/logout', login_controller.logout)
 
 router.get('/home', home_controller.home_validate);
 
