@@ -27,11 +27,18 @@ Create your favorites folders and necesary files.
 > install packages, previous to run project
 npm install
 
+ES6:
+- https://medium.com/@lehiarteaga/ecmascript-6-es6-y-sus-caracter%C3%ADsticas-55a1fc9275b1
+
 sources:
 //source & inspired
 - https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/forms
 - https://github.com/mdn/express-locallibrary-tutorial
 - https://nodewebapps.com/2017/06/18/how-do-nodejs-sessions-work/
 
+session:
+- https://medium.com/of-all-things-tech-progress/starting-with-authentication-a-tutorial-with-node-js-and-mongodb-25d524ca0359
+- https://nodewebapps.com/2017/06/18/how-do-nodejs-sessions-work/
 
-
+templates:
+- https://startbootstrap.com/template-categories/all/

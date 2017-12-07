@@ -1,105 +1,78 @@
 doctype html
 html(lang='en')
   head
-    title Hello, world!
-    // Required meta tags
     meta(charset='utf-8')
     meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
-    link(rel='icon', href='/images/favicon.ico')
-    // Bootstrap CSS
-    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css', integrity='sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb', crossorigin='anonymous')
-    link(href='/css/album.css', rel='stylesheet')
+    meta(name='description', content='')
+    meta(name='author', content='')
+    title Shop Homepage - Start Bootstrap Template
+    // Bootstrap core CSS
+    link(href='css/bootstrap.min.css', rel='stylesheet')
+    // Custom styles for this template
+    link(href='css/shop-homepage.css', rel='stylesheet')
   body
-    header
-      #navbarHeader.collapse.bg-dark
-        .container
-          .row
-            .col-sm-8.py-4
-              h4.text-white About
-              p.text-muted
-                | Add some information about the album below, the author, or any other background context. Make it a few sentences long so folks can pick up some informative tidbits. Then, link them off to some social networking sites or contact information.
-            .col-sm-4.py-4
-              h4.text-white Contact
-              ul.list-unstyled
-                li
-                  a.text-white(href='#') Follow on Twitter
-                li
-                  a.text-white(href='#') Like on Facebook
-                li
-                  a.text-white(href='#') Email me
-      .navbar.navbar-dark.bg-dark
-        .container.d-flex.justify-content-between
-          a.navbar-brand(href='#') Album
-          button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarHeader', aria-controls='navbarHeader', aria-expanded='false', aria-label='Toggle navigation')
-            span.navbar-toggler-icon
-    main(role='main')
-      section.jumbotron.text-center
-        .container
-          h1.jumbotron-heading= email
-          p.lead.text-muted
-            | Something short and leading about the collection below—its contents, the creator, etc. Make it short and sweet, but not too short so folks don't simply skip over it entirely.
-          p
-            a.btn.btn-primary(href='/books') Libros disponibles
-      .album.text-muted
-        .container
-          .row
-            .card
-              img(data-src='holder.js/100px280?theme=thumb', alt='Card image cap')
-              p.card-text
-                | This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
-            .card
-              img(data-src='holder.js/100px280?theme=thumb', alt='Card image cap')
-              p.card-text
-                | This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
-            .card
-              img(data-src='holder.js/100px280?theme=thumb', alt='Card image cap')
-              p.card-text
-                | This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
-            .card
-              img(data-src='holder.js/100px280?theme=thumb', alt='Card image cap')
-              p.card-text
-                | This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
-            .card
-              img(data-src='holder.js/100px280?theme=thumb', alt='Card image cap')
-              p.card-text
-                | This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
-            .card
-              img(data-src='holder.js/100px280?theme=thumb', alt='Card image cap')
-              p.card-text
-                | This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
-            .card
-              img(data-src='holder.js/100px280?theme=thumb', alt='Card image cap')
-              p.card-text
-                | This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
-            .card
-              img(data-src='holder.js/100px280?theme=thumb', alt='Card image cap')
-              p.card-text
-                | This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
-            .card
-              img(data-src='holder.js/100px280?theme=thumb', alt='Card image cap')
-              p.card-text
-                | This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
-    footer.text-muted
+    // Navigation
+    nav.navbar.navbar-expand-lg.navbar-dark.bg-dark.fixed-top
       .container
-        p.float-right
-          a(href='#') Back to top
-        p Album example is © Bootstrap, but please download and customize it for yourself!
-        p
-          | New to Bootstrap? 
-          a(href='../../') Visit the homepage
-          |  or read our 
-          a(href='../../getting-started/') getting started guide
-          | .
-    // Optional JavaScript
-    // jQuery first, then Popper.js, then Bootstrap JS
-    script(src='https://code.jquery.com/jquery-3.2.1.slim.min.js', integrity='sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN', crossorigin='anonymous')
-    script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js', integrity='sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh', crossorigin='anonymous')
-    script(src='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js', integrity='sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ', crossorigin='anonymous')
-    script(src='/js/holder.min.js')
-    script.
-      Holder.addTheme('thumb', {
-      bg: '#55595c',
-      fg: '#eceeef',
-      text: 'Thumbnail'
-      });
-
+        a.navbar-brand(href='#') Inspired bookstore
+        button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarResponsive', aria-controls='navbarResponsive', aria-expanded='false', aria-label='Toggle navigation')
+          span.navbar-toggler-icon
+        #navbarResponsive.collapse.navbar-collapse
+          ul.navbar-nav.ml-auto
+            li.nav-item
+              a.nav-link(href='/logout') Salir
+    // Page Content
+    .container
+      .row
+        .col-lg-3
+          h1.my-4 Shop Name
+          .list-group
+            a.list-group-item(href='#') Category 1
+            a.list-group-item(href='#') Category 2
+            a.list-group-item(href='#') Category 3
+        // /.col-lg-3
+        .col-lg-9
+          #carouselExampleIndicators.carousel.slide.my-4(data-ride='carousel')
+            ol.carousel-indicators
+              li.active(data-target='#carouselExampleIndicators', data-slide-to='0')
+              li(data-target='#carouselExampleIndicators', data-slide-to='1')
+              li(data-target='#carouselExampleIndicators', data-slide-to='2')
+            .carousel-inner(role='listbox')
+              .carousel-item.active
+                img.d-block.img-fluid(src='http://placehold.it/900x350', alt='First slide')
+              .carousel-item
+                img.d-block.img-fluid(src='http://placehold.it/900x350', alt='Second slide')
+              .carousel-item
+                img.d-block.img-fluid(src='http://placehold.it/900x350', alt='Third slide')
+            a.carousel-control-prev(href='#carouselExampleIndicators', role='button', data-slide='prev')
+              span.carousel-control-prev-icon(aria-hidden='true')
+              span.sr-only Previous
+            a.carousel-control-next(href='#carouselExampleIndicators', role='button', data-slide='next')
+              span.carousel-control-next-icon(aria-hidden='true')
+              span.sr-only Next
+          .row
+            each book in book_list
+              .col-lg-4.col-md-6.mb-4
+                .card.h-100
+                  a(href='#')
+                    img.card-img-top(src='http://placehold.it/700x400', alt='')
+                  .card-body
+                    h4.card-title
+                      a(href=book.url)=book.title
+                    h5 $24.99
+                    p.card-text=book.summary
+                  .card-footer
+                    small.text-muted ★ ★ ★ ★ ☆
+            
+          // /.row
+        // /.col-lg-9
+      // /.row
+    // /.container
+    // Footer
+    footer.py-5.bg-dark
+      .container
+        p.m-0.text-center.text-white Copyright © Your Website 2017
+      // /.container
+    // Bootstrap core JavaScript
+    script(src='js/jquery.min.js')
+    script(src='js/bootstrap.min.js')

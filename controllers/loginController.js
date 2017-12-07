@@ -4,9 +4,6 @@ exports.login_post = (req, res, next) => {
     let userSession = req.session;
     userSession.email = req.body.email;
 
-    console.log(`email: ${req.body.email}`);
-    console.log(`password: ${req.body.password}`);
-
     let user = new User({
         email: req.body.email,
         password: req.body.password

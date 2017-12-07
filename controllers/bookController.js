@@ -25,7 +25,7 @@ exports.book_list = (req, res, next) => {
     if (req.session && req.session.email) {
         Book.find({}, function(err, books) {
             if (err) { return next(err); }
-            res.render('books', { title: 'Lista de libros TOP', book_list: books });
+            res.render('home', { title: 'Lista de libros TOP', book_list: books });
           });
     } else {
         res.redirect('/login');

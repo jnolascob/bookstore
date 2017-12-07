@@ -7,16 +7,16 @@ let home_controller = require('../controllers/homeController');
 
 /* GET request */
 router.get('/', (req, res, next) => {
-  res.render('login', { title: 'BOOK-STORE' });
+  res.render('index', {});
 });
 
 router.get('/login', (req, res, next) => {
   res.render('login', {});
 });
 
-router.get('/logout', login_controller.logout)
+router.get('/home', book_controller.book_list);
 
-router.get('/home', home_controller.home_validate);
+router.get('/logout', login_controller.logout)
 
 router.get('/books', book_controller.book_list);
 
@@ -24,6 +24,10 @@ router.get('/book/:id', book_controller.book_detail);
 
 router.get('/book-detail', (req, res, next) => {
   res.render('bookDetail', {});
+});
+
+router.get('/sample', (req, res, next) => {
+  res.render('layout', {});
 });
 
 /* POST request */
